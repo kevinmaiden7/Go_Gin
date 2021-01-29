@@ -23,5 +23,5 @@ func main(){
 	})
 	
 	app.Run() // by default listen and serve on 0.0.0.0:8080
-	// router.Run(":3000") for a hard coded port
+	// app.Run(":3000") for a hard coded port
 }
