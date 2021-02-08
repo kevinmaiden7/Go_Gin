@@ -1,8 +1,9 @@
 package main
 
 import (
-	"github.com/gin-gonic/gin"
 	"net/http"
+
+	"github.com/gin-gonic/gin"
 	"rsc.io/quote"
 )
 
@@ -15,6 +16,10 @@ func main() {
 
 	app.GET("/go", func(c *gin.Context) {
 		c.String(http.StatusOK, quote.Go())
+	})
+
+	app.GET("/glass", func(c *gin.Context) {
+		c.String(http.StatusOK, quote.Glass())
 	})
 
 	app.GET("/index", func(c *gin.Context) {
