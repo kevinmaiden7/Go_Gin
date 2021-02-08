@@ -36,6 +36,13 @@ func main() {
 		c.String(http.StatusOK, "Hello %s", name)
 	})
 
+	app.GET("/concat", func(c *gin.Context) {
+		num1 := c.Query("a")
+		num2 := c.Query("b")
+		num3 := c.Query("c")
+		c.String(http.StatusOK, num1+num2+num3)
+	})
+
 	app.Run() // by default listen and serve on 0.0.0.0:8080
 	// app.Run(":3000") for a hard coded port
 }
