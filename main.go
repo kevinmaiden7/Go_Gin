@@ -20,14 +20,15 @@ func main() {
 
 	app.GET("/glass", func(c *gin.Context) {
 		c.String(http.StatusOK, quote.Glass())
-		
+	})
+
 	app.GET("/opt", func(c *gin.Context) {
 		c.String(http.StatusOK, quote.Opt())
 	})
 
 	app.GET("/index", func(c *gin.Context) {
 		c.JSON(200, gin.H{
-			"message": "index OK",
+			"message": "index OK (200)",
 		})
 	})
 
